@@ -1,0 +1,32 @@
+[00:00:01.928] Server  WARN    ⚠ Turbopack's filesystem cache has been deleted because we previously detected an internal error in Turbopack. Builds or page loads may be slower as a result.
+[00:00:02.557] Server  LOG     ✓ Ready in 1692ms
+[00:00:07.037] Server  LOG     ○ Compiling / ...
+[00:00:18.223] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:02:09.473] Server  LOG     ✓ Compiled in 604ms
+[00:04:37.942] Server  LOG     ✓ Compiled in 310ms
+[00:13:04.530] Server  LOG     ✓ Compiled in 270ms
+[00:13:04.671] Browser ERROR   uncaughtError: TypeError: undefined is not an object (evaluating 'menuItems[activeCategory].map')
+[00:13:13.984] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:13:13.999] Server  LOG     ✓ Compiled in 204ms
+[00:15:13.596] Server  LOG     ✓ Compiled in 150ms
+[00:16:21.910] Server  LOG     ✓ Compiled in 84ms
+[00:16:37.917] Server  LOG     ✓ Compiled in 88ms
+[00:17:16.317] Server  LOG     ✓ Compiled in 95ms
+[00:17:35.217] Server  LOG     ✓ Compiled in 113ms
+[00:17:42.117] Server  LOG     ✓ Compiled in 196ms
+[00:17:57.586] Server  LOG     ✓ Compiled in 107ms
+[00:18:08.949] Server  LOG     ✓ Compiled in 161ms
+[00:18:21.460] Server  LOG     ✓ Compiled in 104ms
+[00:18:30.166] Server  LOG     ✓ Compiled in 117ms
+[00:19:02.837] Server  LOG     ✓ Compiled in 139ms
+[00:19:32.747] Server  LOG     ✓ Compiled in 116ms
+[00:19:49.251] Server  LOG     ✓ Compiled in 133ms
+[00:20:00.494] Server  LOG     ✓ Compiled in 139ms
+[00:21:08.039] Server  LOG     ✓ Compiled in 352ms
+[00:21:55.521] Server  LOG     ✓ Compiled in 135ms
+[00:23:20.170] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:25:52.782] Server  LOG     ✓ Compiled in 712ms
+[00:33:49.482] Server  LOG     ✓ Compiled in 152ms
+[00:34:32.436] Server  LOG     ✓ Compiled in 133ms
+[00:35:02.364] Server  LOG     ✓ Compiled in 127ms
+[00:37:24.870] Server  LOG     ✓ Compiled in 164ms
