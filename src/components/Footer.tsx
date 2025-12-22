@@ -75,7 +75,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">İletişim</h4>
             <div className="space-y-2 text-gray-400">
               <p>📍 Turgut Özal Cd. No:7, 34788 Çekmeköy/İstanbul</p>
-              <p>📞 0 (2016)336 58 29</p>
+              <p>📞 0 (216)336 58 29</p>
               <p>📧 info@kaburgaciaybaz.com</p>
             </div>
           </div>
