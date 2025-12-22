@@ -6,9 +6,9 @@ import SEO from '@/components/SEO'
 export default function AboutPage() {
   return (
     <>
-      <SEO 
+      <SEO
         title="Hakkımızda - Kaburgacı Aybaz"
-        description="28 yıllık lezzet serüvenimiz ve bizi özel kılan değerlerimiz"
+        description="Misyonumuz, vizyonumuz ve değerlerimizle Türkiye'nin en lezzetli kaburga deneyimini sunuyoruz"
       />
       <div className="min-h-screen">
         <Header />

@@ -64,7 +64,7 @@ const Contact = () => {
     {
       icon: '📞',
       title: 'Telefon',
-      content: '0216 555 12 34\n0532 123 45 67'
+      content: '336 58 29'
     },
     {
       icon: '⏰',

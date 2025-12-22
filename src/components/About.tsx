@@ -4,53 +4,40 @@ import { useState } from 'react'
 import ScrollAnimation from './ScrollAnimation'
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState('hikaye')
+  const [activeTab, setActiveTab] = useState('misyon')
 
   const tabs = [
-    { id: 'hikaye', name: 'Hikayemiz', icon: '📖' },
     { id: 'misyon', name: 'Misyonumuz', icon: '🎯' },
     { id: 'vizyon', name: 'Vizyonumuz', icon: '🔮' },
     { id: 'degerler', name: 'Değerlerimiz', icon: '💎' }
   ]
 
   const tabContent = {
-    hikaye: {
-      title: '1995\'ten Beri Lezzetin Adresi',
-      content: [
-        'Kaburgacı Aybaz, 1995 yılında küçük bir aile işletmesi olarak başladı. Kurucumuz Aybaz Bey, yıllar süren mutfak deneyimini ve et işleme konusundaki ustalığını birleştirerek Türkiye\'nin en lezzetli kaburga tariflerini oluşturdu.',
-        'İlk günlerde sadece birkaç çeşit kaburga ile hizmet veren restoranımız, zamanla müşterilerimizin talepleri doğrultusunda menüsünü genişletti. Özellikle "Aybaz Özel Kaburga" tarifi, kısa sürede müşterilerimizin favorisi haline geldi.',
-        'Bugün, 28 yıllık tecrübemizle Türkiye\'nin dört bir yanından gelen misafirlerimize en kaliteli hizmeti sunmaya devam ediyoruz. Her bir lokmada yılların birikimini ve ailemizin lezzet sırrını bulabilirsiniz.'
-      ],
-      image: '/images/about-story.jpg'
-    },
     misyon: {
       title: 'Misyonumuz',
       content: [
-        'Müşterilerimize en kaliteli ve taze malzemelerle hazırlanmış, lezzetli yemekler sunmak.',
-        'Geleneksel Türk mutfağını modern sunum teknikleriyle birleştirerek benzersiz bir deneyim yaşatmak.',
-        'Her müşteriyi ailemizin bir üyesi gibi karşılayarak sıcak ve samimi bir ortam oluşturmak.',
-        'Sürdürülebilir ve etik üretim anlayışıyla çevreye ve topluma karşı sorumluluklarımızı yerine getirmek.'
+        'Kaburgacı Aybaz olarak misyonumuz; ustalıkla hazırlanan kaburgayı, en kaliteli malzemelerle, geleneksel lezzet anlayışını bozmadan misafirlerimize sunmak; her lokmada samimiyeti, doyuruculuğu ve gerçek et lezzetini hissettirmektir.',
+        'Misafirlerimizin yalnızca karınlarını değil, lezzet hafızalarını da doyurmayı amaçlıyoruz.'
       ],
       image: '/images/about-mission.jpg'
     },
     vizyon: {
       title: 'Vizyonumuz',
       content: [
-        'Türkiye\'nin en çok tercih edilen kaburga restoranı olmak.',
-        'Uluslararası alanda Türk mutfağını temsil eden bir marka haline gelmek.',
-        'Yenilikçi lezzetler ve sunumlarla sektörde lider konumunu korumak.',
-        'Franchising sistemiyle Türkiye ve dünyada daha fazla noktada hizmet vermek.'
+        'Türkiye\'de kaburga denince akla gelen, lezzetiyle, hizmetiyle ve kalitesiyle fark yaratan öncü bir marka olmak.',
+        'Gelenekten kopmadan yeniliğe açık, her şubede aynı lezzeti sunan, kaburgayı bir "yemek"ten öte bir deneyim haline getiren bir marka olmayı hedefliyoruz.'
       ],
       image: '/images/about-vision.jpg'
     },
     degerler: {
       title: 'Değerlerimiz',
       content: [
-        'Kalite: Her zaman en kaliteli malzemeleri kullanırız.',
-        'Müşteri Odaklılık: Müşteri memnuniyetini her şeyin üstünde tutarız.',
-        'Geleneksel: Geleneksel tariflerimizi korurken modernize ederiz.',
-        'Samimiyet: Her müşteriyi ailemizin bir üyesi gibi karşılarız.',
-        'Sürdürülebilirlik: Doğaya ve topluma karşı sorumluluğumuz bilincindeyiz.'
+        'Kalite: Et seçiminden pişirme sürecine kadar taviz vermediğimiz kalite anlayışı',
+        'Ustalık: İşimizi bilen ellerden çıkan, sabırla pişirilen gerçek kaburga',
+        'Samimiyet: Misafirlerimizi müşteri değil, soframıza oturan dost olarak görmek',
+        'Gelenek: Türk mutfağının köklü lezzetlerini yaşatmak',
+        'Hijyen: Temizlik ve gıda güvenliğinde en yüksek standartlar',
+        'Süreklilik: Bugün olduğu gibi yarın da aynı lezzeti sunma sözü'
       ],
       image: '/images/about-values.jpg'
     }
@@ -87,7 +74,7 @@ const About = () => {
             Hakkımızda
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            28 yıllık lezzet serüvenimiz ve bizi özel kılan değerlerimiz
+            Misyonumuz, vizyonumuz ve değerlerimizle Türkiye'nin en lezzetli kaburga deneyimini sunuyoruz
           </p>
         </div>
 
@@ -151,13 +138,10 @@ const About = () => {
 
         {/* Statistics */}
         <div className="mt-16 bg-primary-600 rounded-2xl p-8 text-white">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
+           
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">28+</div>
-              <div className="text-primary-100">Yıllık Tecrübe</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">50K+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">5K+</div>
               <div className="text-primary-100">Mutlu Müşteri</div>
             </div>
             <div>

@@ -13,7 +13,7 @@ const Hero = () => {
       description: 'Özenle seçilen etler, usta ellerde hazırlanan özel soslar ve unutulmaz tatlar...',
       buttonText: 'Menüyü İncele',
       buttonLink: '#menu',
-      image: '/images/1.jpg'
+      image: '/images/s1.png'
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const Hero = () => {
       description: '1995\'ten beri size hizmet veriyor, her bir lokmayı özenle hazırlıyoruz...',
       buttonText: 'Hakkımızda',
       buttonLink: '#about',
-      image: '/images/bg_aybaz.jpg'
+      image: '/images/s2.png'
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Hero = () => {
       description: 'Doğum günleri, yıldönümleri ve özel kutlamalar için ideal mekan...',
       buttonText: 'Rezervasyon Yap',
       buttonLink: '#contact',
-      image: '/images/2.jpg'
+      image: '/images/s3.png'
     }
   ]
 
@@ -67,7 +67,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 fade-in text-shadow">
             {slides[currentSlide].title}
           </h1>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-secondary-400 fade-in">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-red-500 fade-in">
             {slides[currentSlide].subtitle}
           </h2>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto fade-in">
@@ -90,7 +90,7 @@ const Hero = () => {
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               currentSlide === index
-                ? 'bg-secondary-500 w-8'
+                ? 'bg-red-500 w-8'
                 : 'bg-white bg-opacity-50 hover:bg-opacity-75'
             }`}
             aria-label={`Slide ${index + 1}`}

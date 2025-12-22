@@ -57,7 +57,7 @@ const Header = () => {
             <li>
               <Link
                 href="/"
-                className={`font-medium transition-colors duration-300 hover:text-secondary-500 ${
+                className={`font-medium transition-colors duration-300 hover:text-primary-500 ${
                   isScrolled || isLightPage ? 'text-gray-800' : 'text-white'
                 }`}
               >
@@ -67,7 +67,7 @@ const Header = () => {
             <li>
               <Link
                 href="/menu"
-                className={`font-medium transition-colors duration-300 hover:text-secondary-500 ${
+                className={`font-medium transition-colors duration-300 hover:text-primary-500 ${
                   isScrolled || isLightPage ? 'text-gray-800' : 'text-white'
                 }`}
               >
@@ -77,7 +77,7 @@ const Header = () => {
             <li>
               <Link
                 href="/about"
-                className={`font-medium transition-colors duration-300 hover:text-secondary-500 ${
+                className={`font-medium transition-colors duration-300 hover:text-primary-500 ${
                   isScrolled || isLightPage ? 'text-gray-800' : 'text-white'
                 }`}
               >
@@ -87,7 +87,7 @@ const Header = () => {
             <li>
               <Link
                 href="/contact"
-                className={`font-medium transition-colors duration-300 hover:text-secondary-500 ${
+                className={`font-medium transition-colors duration-300 hover:text-primary-500 ${
                   isScrolled || isLightPage ? 'text-gray-800' : 'text-white'
                 }`}
               >
@@ -136,7 +136,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/"
-                  className="block text-gray-800 font-medium hover:text-secondary-500 transition-colors duration-300 py-2 border-b border-gray-100"
+                  className="block text-gray-800 font-medium hover:text-primary-500 transition-colors duration-300 py-2 border-b border-gray-100"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Ana Sayfa
@@ -145,7 +145,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/menu"
-                  className="block text-gray-800 font-medium hover:text-secondary-500 transition-colors duration-300 py-2 border-b border-gray-100"
+                  className="block text-gray-800 font-medium hover:text-primary-500 transition-colors duration-300 py-2 border-b border-gray-100"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Menü
@@ -154,7 +154,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/about"
-                  className="block text-gray-800 font-medium hover:text-secondary-500 transition-colors duration-300 py-2 border-b border-gray-100"
+                  className="block text-gray-800 font-medium hover:text-primary-500 transition-colors duration-300 py-2 border-b border-gray-100"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Hakkımızda
@@ -163,7 +163,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="block text-gray-800 font-medium hover:text-secondary-500 transition-colors duration-300 py-2"
+                  className="block text-gray-800 font-medium hover:text-primary-500 transition-colors duration-300 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   İletişim
