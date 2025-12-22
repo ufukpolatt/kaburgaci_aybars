@@ -27,10 +27,11 @@ const ScrollAnimation = ({
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
+  // Create a properly typed variants object
   const updatedVariants: Variants = {
-    ...variants,
+    hidden: variants.hidden || { opacity: 0, y: 50 },
     visible: {
-      ...variants.visible,
+      ...(variants.visible as Variant || { opacity: 1, y: 0 }),
       transition: { ...transition, delay, duration }
     }
   }
