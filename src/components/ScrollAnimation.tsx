@@ -1,15 +1,12 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, Variants, Variant } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 interface ScrollAnimationProps {
   children: React.ReactNode
-  variants?: {
-    hidden: object
-    visible: object
-  }
+  variants?: Variants
   transition?: object
   className?: string
   delay?: number
@@ -30,7 +27,7 @@ const ScrollAnimation = ({
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
-  const updatedVariants = {
+  const updatedVariants: Variants = {
     ...variants,
     visible: {
       ...variants.visible,
