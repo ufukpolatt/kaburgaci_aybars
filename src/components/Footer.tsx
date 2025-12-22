@@ -4,10 +4,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const quickLinks = [
-    { name: 'Ana Sayfa', href: '#home' },
-    { name: 'Menü', href: '#menu' },
-    { name: 'Hakkımızda', href: '#about' },
-    { name: 'İletişim', href: '#contact' }
+    { name: 'Ana Sayfa', href: '/' },
+    { name: 'Menü', href: '/menu' },
+    { name: 'Hakkımızda', href: '/about' },
+    { name: 'İletişim', href: '/contact' }
   ]
 
 
@@ -61,7 +61,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-secondary-500 transition-colors duration-300"
+                    className="text-gray-400 hover:text-primary-500 transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">İletişim</h4>
             <div className="space-y-2 text-gray-400">
               <p>📍 Turgut Özal Cd. No:7, 34788 Çekmeköy/İstanbul</p>
-              <p>📞 336 58 29</p>
+              <p>📞 0 (2016)336 58 29</p>
               <p>📧 info@kaburgaciaybaz.com</p>
             </div>
           </div>
@@ -85,10 +85,10 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
           <p>
             © {currentYear} Kaburgacı Aybaz. Tüm hakları saklıdır. | 
-            <Link href="#" className="hover:text-secondary-500 transition-colors duration-300">
+            <Link href="#" className="hover:text-primary-500 transition-colors duration-300">
               Gizlilik Politikası
-            </Link> | 
-            <Link href="#" className="hover:text-secondary-500 transition-colors duration-300">
+            </Link> |
+            <Link href="#" className="hover:text-primary-500 transition-colors duration-300">
               Kullanım Koşulları
             </Link>
           </p>

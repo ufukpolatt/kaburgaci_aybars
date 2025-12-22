@@ -59,22 +59,22 @@ const Contact = () => {
     {
       icon: '📍',
       title: 'Adres',
-      content: 'Mehmet Yavaş Bulvarı No:123\nKadıköy/İstanbul'
+      content: 'Turgut Özal Cd. No:7, 34788 Çekmeköy/İstanbul'
     },
     {
       icon: '📞',
       title: 'Telefon',
-      content: '336 58 29'
+      content: '0 (216)336 58 29'
     },
     {
       icon: '⏰',
       title: 'Çalışma Saatleri',
-      content: 'Pazartesi - Cuma: 11:00 - 23:00\nCumartesi - Pazar: 12:00 - 00:00'
+      content: 'Pazartesi - Cuma: 11:00 - 00:00\nCumartesi - Pazar: 12:00 - 00:00'
     },
     {
       icon: '✉️',
       title: 'E-posta',
-      content: 'info@kaburgaciaybaz.com\nrezervasyon@kaburgaciaybaz.com'
+      content: 'info@kaburgaciaybaz.com'
     }
   ]
 
