@@ -106,29 +106,40 @@ const WaiterOrderView = () => {
       const qrData = JSON.parse(data)
       
       if (qrData.type === 'order' && qrData.orderId) {
-        // Find the order in the existing orders
-        const foundOrder = orders.find(order => order.id === qrData.orderId)
+        let foundOrder: Order | null = null
         
-        if (foundOrder) {
-          setScannedOrder(foundOrder)
-        } else {
-          // If not found in current orders, try to load from localStorage
+        // First, try to find the order in the existing orders
+        foundOrder = orders.find(order => order.id === qrData.orderId) || null
+        
+        // If not found in current orders, check if order data is embedded in QR code
+        if (!foundOrder && qrData.order) {
+          foundOrder = qrData.order
+          // Add to current orders if not already there
+          if (!orders.find(o => o.id === foundOrder!.id)) {
+            setOrders(prev => [...prev, foundOrder!])
+          }
+        }
+        
+        // If still not found, try to load from localStorage
+        if (!foundOrder) {
           const storedOrders = localStorage.getItem('orders')
           if (storedOrders) {
             const parsedOrders = JSON.parse(storedOrders)
             const orderFromStorage = parsedOrders.find((o: Order) => o.id === qrData.orderId)
             if (orderFromStorage) {
-              setScannedOrder(orderFromStorage)
+              foundOrder = orderFromStorage
               // Add to current orders if not already there
               if (!orders.find(o => o.id === orderFromStorage.id)) {
                 setOrders(prev => [...prev, orderFromStorage])
               }
-            } else {
-              alert('Sipariş bulunamadı!')
             }
-          } else {
-            alert('Sipariş bulunamadı!')
           }
+        }
+        
+        if (foundOrder) {
+          setScannedOrder(foundOrder)
+        } else {
+          alert('Sipariş bulunamadı! QR kodu kontrol edip tekrar deneyin.')
         }
       } else {
         alert('Geçersiz QR kod formatı!')
@@ -248,7 +259,7 @@ const WaiterOrderView = () => {
                     data={JSON.stringify({
                       type: 'order',
                       orderId: selectedOrderId,
-                      url: `${window.location.origin}/order/${selectedOrderId}`
+                      url: `${window.location.origin}/order/${selectedOrderId}#${encodeURIComponent(JSON.stringify({ type: 'order', orderId: selectedOrderId, order: orders.find(o => o.id === selectedOrderId) }))}`
                     })}
                     size={250}
                   />
