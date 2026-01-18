@@ -25,15 +25,37 @@ export default function OrderPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Load order from localStorage
+    // Load order from localStorage or check if it's in the URL as a parameter
     const loadOrder = () => {
       try {
+        // First try to find the order in localStorage
         const storedOrders = localStorage.getItem('orders')
         if (storedOrders) {
           const parsedOrders = JSON.parse(storedOrders)
           const foundOrder = parsedOrders.find((o: Order) => o.id === orderId)
           if (foundOrder) {
             setOrder(foundOrder)
+            setLoading(false)
+            return
+          }
+        }
+        
+        // If not found in localStorage, check if the order data is in the URL hash
+        // This can happen when scanning a QR code that contains the full order data
+        if (typeof window !== 'undefined' && window.location.hash) {
+          try {
+            const hashData = JSON.parse(decodeURIComponent(window.location.hash.substring(1)))
+            if (hashData.type === 'order' && hashData.order && hashData.orderId === orderId) {
+              setOrder(hashData.order)
+              // Also save it to localStorage for future reference
+              const existingOrders = JSON.parse(localStorage.getItem('orders') || '[]')
+              if (!existingOrders.find((o: Order) => o.id === orderId)) {
+                existingOrders.push(hashData.order)
+                localStorage.setItem('orders', JSON.stringify(existingOrders))
+              }
+            }
+          } catch (hashError) {
+            console.error('Hash verisi işlenirken hata:', hashError)
           }
         }
       } catch (error) {
