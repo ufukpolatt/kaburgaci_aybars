@@ -27,9 +27,7 @@ const Menu = () => {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [isQRModalOpen, setIsQRModalOpen] = useState(false)
   const [orderData, setOrderData] = useState<string>('')
-  const [quantityModalOpen, setQuantityModalOpen] = useState(false)
-  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
-  const [selectedQuantity, setSelectedQuantity] = useState(1)
+  const [itemQuantities, setItemQuantities] = useState<{ [key: number]: number }>({})
 
   const menuCategories = [
     { id: 'baslangic', name: 'BAŞLANGIÇ', icon: '🥗' },
@@ -356,13 +354,6 @@ const Menu = () => {
     ]
   }
 
-  // Open quantity modal
-  const openQuantityModal = (item: MenuItem) => {
-    setSelectedItem(item)
-    setSelectedQuantity(1)
-    setQuantityModalOpen(true)
-  }
-
   // Add item to cart with specified quantity
   const addToCart = (item: MenuItem, quantity: number = 1) => {
     setCartItems(prevItems => {
@@ -383,16 +374,6 @@ const Menu = () => {
         quantity
       }]
     })
-  }
-
-  // Handle adding item with selected quantity
-  const handleAddToCartWithQuantity = () => {
-    if (selectedItem) {
-      addToCart(selectedItem, selectedQuantity)
-      setQuantityModalOpen(false)
-      setSelectedItem(null)
-      setSelectedQuantity(1)
-    }
   }
 
   // Remove item from cart
@@ -417,7 +398,7 @@ const Menu = () => {
   const generateOrderData = () => {
     const orderId = `ORDER-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     const order = {
-      orderId,
+      id: orderId, // Changed from orderId to id to match the interface
       items: cartItems.map(item => ({
         id: item.id,
         name: item.name,
@@ -434,11 +415,11 @@ const Menu = () => {
     existingOrders.push(order)
     localStorage.setItem('orders', JSON.stringify(existingOrders))
     
-    // Create QR code data
+    // Create QR code data with order-specific URL
     const qrData = JSON.stringify({
       type: 'order',
       orderId,
-      url: `${window.location.origin}/waiter`
+      url: `${window.location.origin}/order/${orderId}`
     })
     
     setOrderData(qrData)
@@ -503,15 +484,47 @@ const Menu = () => {
                 )}
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                  {item.name}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {item.description}
-                </p>
-                <div className="flex justify-end">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                      {item.name}
+                    </h3>
+                    <p className="text-gray-600">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={() => {
+                        const currentQty = itemQuantities[item.id] || 1
+                        if (currentQty > 1) {
+                          setItemQuantities(prev => ({ ...prev, [item.id]: currentQty - 1 }))
+                        }
+                      }}
+                      className="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
+                    >
+                      -
+                    </button>
+                    <span className="w-8 text-center font-medium">
+                      {itemQuantities[item.id] || 1}
+                    </span>
+                    <button
+                      onClick={() => {
+                        const currentQty = itemQuantities[item.id] || 1
+                        setItemQuantities(prev => ({ ...prev, [item.id]: currentQty + 1 }))
+                      }}
+                      className="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
+                    >
+                      +
+                    </button>
+                  </div>
                   <button
-                    onClick={() => openQuantityModal(item)}
+                    onClick={() => {
+                      const quantity = itemQuantities[item.id] || 1
+                      addToCart(item, quantity)
+                    }}
                     className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     Menüye Ekle
@@ -643,7 +656,7 @@ const Menu = () => {
                 
                 <div className="mt-6 p-4 bg-gray-50 rounded-lg">
                   <p className="text-sm text-gray-600">
-                    Sipariş numaranız garson tarafından tarandıktan sonra hazırlanmaya başlayacaktır.
+                    Siparişiniz oluşturuldu. Garson bu QR kodu tarayarak sipariş detaylarını görebilir.
                   </p>
                 </div>
               </div>
@@ -652,60 +665,6 @@ const Menu = () => {
         </div>
       )}
 
-      {/* Quantity Selection Modal */}
-      {quantityModalOpen && selectedItem && (
-        <div className="fixed inset-0 z-50 overflow-hidden">
-          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setQuantityModalOpen(false)}></div>
-          <div className="absolute inset-0 flex items-center justify-center p-4">
-            <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative">
-              <button
-                onClick={() => setQuantityModalOpen(false)}
-                className="absolute top-4 right-4 p-2 rounded-md hover:bg-gray-100"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              
-              <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{selectedItem.name}</h3>
-                <p className="text-gray-600">{selectedItem.description}</p>
-              </div>
-              
-              <div className="flex items-center justify-center space-x-4 mb-6">
-                <button
-                  onClick={() => setSelectedQuantity(Math.max(1, selectedQuantity - 1))}
-                  className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
-                >
-                  -
-                </button>
-                <span className="text-2xl font-semibold w-12 text-center">{selectedQuantity}</span>
-                <button
-                  onClick={() => setSelectedQuantity(selectedQuantity + 1)}
-                  className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
-                >
-                  +
-                </button>
-              </div>
-              
-              <div className="flex space-x-3">
-                <button
-                  onClick={() => setQuantityModalOpen(false)}
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
-                >
-                  İptal
-                </button>
-                <button
-                  onClick={handleAddToCartWithQuantity}
-                  className="flex-1 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors"
-                >
-                  Sepete Ekle
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   )
 }
