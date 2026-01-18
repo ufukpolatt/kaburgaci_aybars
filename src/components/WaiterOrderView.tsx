@@ -259,7 +259,7 @@ const WaiterOrderView = () => {
                     data={JSON.stringify({
                       type: 'order',
                       orderId: selectedOrderId,
-                      url: `${window.location.origin}/order/${selectedOrderId}#${encodeURIComponent(JSON.stringify({ type: 'order', orderId: selectedOrderId, order: orders.find(o => o.id === selectedOrderId) }))}`
+                      url: `${window.location.origin}/order/${selectedOrderId}`
                     })}
                     size={250}
                   />

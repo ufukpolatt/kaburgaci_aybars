@@ -415,12 +415,11 @@ const Menu = () => {
     existingOrders.push(order)
     localStorage.setItem('orders', JSON.stringify(existingOrders))
     
-    // Create QR code data with full order details embedded
+    // Create QR code data with just the order ID to keep QR code scannable
     const qrData = JSON.stringify({
       type: 'order',
       orderId,
-      order: order, // Embed the full order data in the QR code
-      url: `${window.location.origin}/order/${orderId}#${encodeURIComponent(JSON.stringify({ type: 'order', orderId, order }))}`
+      url: `${window.location.origin}/order/${orderId}`
     })
     
     setOrderData(qrData)
