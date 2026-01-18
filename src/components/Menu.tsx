@@ -2,17 +2,22 @@
 
 import { useState } from 'react'
 import ScrollAnimation from './ScrollAnimation'
+import QRCodeComponent from './QRCode'
 
 interface MenuItem {
   id: number
   name: string
   description: string
-  price: string
   image: string
   popular?: boolean
 }
 
-interface CartItem extends MenuItem {
+interface CartItem {
+  id: number
+  name: string
+  description: string
+  image: string
+  popular?: boolean
   quantity: number
 }
 
@@ -20,6 +25,11 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('baslangic')
   const [cartItems, setCartItems] = useState<CartItem[]>([])
   const [isCartOpen, setIsCartOpen] = useState(false)
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false)
+  const [orderData, setOrderData] = useState<string>('')
+  const [quantityModalOpen, setQuantityModalOpen] = useState(false)
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
+  const [selectedQuantity, setSelectedQuantity] = useState(1)
 
   const menuCategories = [
     { id: 'baslangic', name: 'BAŞLANGIÇ', icon: '🥗' },
@@ -41,28 +51,24 @@ const Menu = () => {
         id: 1,
         name: 'Kemik Suyunda Fırın Güveç Çorba',
         description: '',
-        price: '150,00 ₺',
         image: '/images/corba.jpg'
       },
       {
         id: 2,
         name: 'Fırında Demleme Bulgur Pilavı',
         description: '',
-        price: '130,00 ₺',
         image: '/images/pilav.jpg'
       },
       {
         id: 3,
         name: 'İçli Köfte Kızartma',
         description: '',
-        price: '150,00 ₺',
         image: '/images/icli-kofte.jpg'
       },
       {
         id: 4,
         name: 'Babagannuş',
         description: '',
-        price: '130,00 ₺',
         image: '/images/babagannus.jpg'
       }
     ],
@@ -71,14 +77,12 @@ const Menu = () => {
         id: 5,
         name: 'Tablacı Salata',
         description: '',
-        price: '230,00 ₺',
         image: '/images/tablaci-salata.jpg'
       },
       {
         id: 6,
         name: 'Gavurdağı Salata',
         description: '',
-        price: '270,00 ₺',
         image: '/images/gavurdagi-salata.jpg'
       }
     ],
@@ -87,14 +91,12 @@ const Menu = () => {
         id: 7,
         name: 'Adana İşi Tabak Altı Lahmacun 3\'lü',
         description: 'Maydanoz Domates/ Turp Limon İle Servis',
-        price: '330,00 ₺',
         image: '/images/lahmacun-3lu.jpg'
       },
       {
         id: 8,
         name: 'Adana İşi Tabak Altı Lahmacun 5\'li',
         description: 'Maydanoz Domates/ Turp Limon İle Servis',
-        price: '550,00 ₺',
         image: '/images/lahmacun-5li.jpg'
       }
     ],
@@ -103,28 +105,24 @@ const Menu = () => {
         id: 9,
         name: 'Böbrek Şiş',
         description: '130 Gr',
-        price: '290,00 ₺',
         image: '/images/bobrek-sis.jpg'
       },
       {
         id: 10,
         name: 'Billur Şiş',
         description: '130 Gr',
-        price: '270,00 ₺',
         image: '/images/billur-sis.jpg'
       },
       {
         id: 11,
         name: 'Yürek Şiş',
         description: '130 Gr',
-        price: '310,00 ₺',
         image: '/images/yurek-sis.jpg'
       },
       {
         id: 12,
         name: 'Aperatif Karışık',
         description: 'Yarım Böbrek, Yarım Billur, Yarım Yürek (200 Gr)',
-        price: '450,00 ₺',
         image: '/images/aperatif-karisik.jpg',
         popular: true
       }
@@ -134,56 +132,48 @@ const Menu = () => {
         id: 13,
         name: 'Kıyma Şiş (Acılı/Acisiz)',
         description: '160 Gr',
-        price: '570,00 ₺',
         image: '/images/kiyma-sis.jpg'
       },
       {
         id: 14,
         name: 'Kaburga Şiş (Kemikli /Kemiksiz)',
         description: '190 Gr',
-        price: '590,00 ₺',
         image: '/images/kaburga-sis.jpg'
       },
       {
         id: 15,
         name: 'Ciğer Şiş',
         description: '190 Gr',
-        price: '610,00 ₺',
         image: '/images/ciger-sis.jpg'
       },
       {
         id: 16,
         name: 'Pirzola Şiş',
         description: '180 Gr',
-        price: '690,00 ₺',
         image: '/images/pirzola-sis.jpg'
       },
       {
         id: 17,
         name: 'Yağlıkara',
         description: '170 Gr',
-        price: '690,00 ₺',
         image: '/images/yaglikara.jpg'
       },
       {
         id: 18,
         name: 'Kazbaşı Şiş',
         description: '180 Gr',
-        price: '720,00 ₺',
         image: '/images/kazbasi.jpg'
       },
       {
         id: 19,
         name: 'Yaprak Kanat Şiş',
         description: '300 Gr',
-        price: '530,00 ₺',
         image: '/images/kanat-sis.jpg'
       },
       {
         id: 20,
         name: 'Kemiksiz Tavuk Sarma',
         description: '300 Gr',
-        price: '490,00 ₺',
         image: '/images/tavuk-sarma.jpg'
       }
     ],
@@ -192,14 +182,12 @@ const Menu = () => {
         id: 21,
         name: 'Tavuk Menü',
         description: 'İki Parça Tavuk Sarma, Bulgur Pilavı, Fırın Patates Yemek sonrası sürpriz yumurta',
-        price: '550,00 ₺',
         image: '/images/cocuk-menu.jpg'
       },
       {
         id: 22,
         name: 'Et Menü',
         description: 'İki Kalem Pirzola, Bulgur Pilavı, Fırın Patates Yemek sonrası sürpriz yumurta',
-        price: '650,00 ₺',
         image: '/images/et-menu.jpg',
       },
     ],
@@ -208,56 +196,48 @@ const Menu = () => {
         id: 24,
         name: 'Basma (Adana İşi Kebap)',
         description: '220 Gr',
-        price: '750,00 ₺',
         image: '/images/basma.jpg'
       },
       {
         id: 25,
         name: 'Löp (Kuzu Pirzola)',
         description: '210 Gr',
-        price: '850,00 ₺',
         image: '/images/lop-pirzola.jpg'
       },
       {
         id: 26,
         name: 'Kelebek (Kuzu Sırt)',
         description: '220 Gr',
-        price: '850,00 ₺',
         image: '/images/kelebek.jpg'
       },
       {
         id: 27,
         name: 'Lokum (Kuzu Küşleme)',
         description: '220 Gr',
-        price: '950,00 ₺',
         image: '/images/lokum.jpg'
       },
       {
         id: 28,
         name: 'Adana İşi Karışık',
         description: 'Kıyma, Kemiksiz Kaburga, Ciğer - 350 Gr (Tek Kişilik)',
-        price: '1.150,00 ₺',
         image: '/images/adana-karisik.jpg'
       },
       {
         id: 29,
         name: 'Löp Karışık',
         description: 'Kazbaşı, Tavuk Sarma, Löp Pirzola - 600 Gr (İki Kişilik)',
-        price: '1.750,00 ₺',
         image: '/images/lop-karisik.jpg'
       },
       {
         id: 30,
         name: 'Kemikli Karışık',
         description: 'Kaburga, Pirzola, Kanat - 700 Gr (Üç Kişilik)',
-        price: '1.950,00 ₺',
         image: '/images/kemikli-karisik.jpg'
       },
       {
         id: 31,
         name: 'Aybaz Karışık',
         description: 'Kıyma, Yağlıkara, Yaprak Kanat, Kemikli Kaburga - 800 Gr (Dört Kişilik)',
-        price: '2.250,00 ₺',
         image: '/images/aybaz-karisik.jpg',
         popular: true
       }
@@ -268,28 +248,24 @@ const Menu = () => {
         id: 32,
         name: 'Adana Dürüm (Acılı/Acisiz)',
         description: '130 Gr',
-        price: '430,00 ₺',
         image: '/images/adana-durum.jpg'
       },
       {
         id: 33,
         name: 'Kaburga Şiş Dürüm',
         description: '130 Gr',
-        price: '450,00 ₺',
         image: '/images/kaburga-durum.jpg'
       },
       {
         id: 34,
         name: 'Tavuk Şiş Dürüm',
         description: '170 Gr',
-        price: '390,00 ₺',
         image: '/images/tavuk-durum.jpg'
       },
       {
         id: 35,
         name: 'Ciğer Şiş Dürüm',
         description: '130 Gr',
-        price: '450,00 ₺',
         image: '/images/ciger-durum.jpg'
       }
     ],
@@ -298,7 +274,6 @@ const Menu = () => {
         id: 36,
         name: 'Adana İşi Fırın Et Tava',
         description: '320 Gr - Tavalar iki kişilik servis edilir. Pişme süresi 25 dakikadır. Yanında söğüş tabağı ve adana turşu ile servis edilir.',
-        price: '1.500,00 ₺',
         image: '/images/et-tava.jpg',
         popular: true
       },
@@ -306,7 +281,6 @@ const Menu = () => {
         id: 37,
         name: 'Adana İşi Fırın Tavuk Tava',
         description: '360 Gr - Tavalar iki kişilik servis edilir. Pişme süresi 25 dakikadır. Yanında söğüş tabağı ve adana turşu ile servis edilir.',
-        price: '1.100,00 ₺',
         image: '/images/tavuk-tava.jpg'
       }
     ],
@@ -315,28 +289,24 @@ const Menu = () => {
         id: 38,
         name: 'Heybet Fırın Sütlaç',
         description: '',
-        price: '170,00 ₺',
         image: '/images/sutlac.jpg'
       },
       {
         id: 39,
         name: 'Tepsi Kadayıf',
         description: '',
-        price: '190,00 ₺',
         image: '/images/tepsi-kadayif.jpg'
       },
       {
         id: 40,
         name: 'Fıstıklı Kesme Baklava',
         description: '2 Dilim',
-        price: '270,00 ₺',
         image: '/images/baklava.jpg'
       },
       {
         id: 41,
         name: 'Dilim Dondurma',
         description: '',
-        price: '70,00 ₺',
         image: '/images/dondurma.jpg'
       }
     ],
@@ -345,72 +315,84 @@ const Menu = () => {
         id: 42,
         name: 'Taşkesti Cam Şişe Su',
         description: '330 Ml',
-        price: '45,00 ₺',
         image: '/images/su.jpg'
       },
       {
         id: 43,
         name: 'Damla Maden Suyu',
         description: '200 Ml',
-        price: '50,00 ₺',
         image: '/images/maden-suyu.jpg'
       },
       {
         id: 44,
         name: 'Gazlı Şişe Meşrubat',
         description: '300 Ml',
-        price: '80,00 ₺',
         image: '/images/mesrubat.jpg'
       },
       {
         id: 45,
         name: 'Turnip Şalgam (Acılı/Acisiz)',
         description: '330 Ml',
-        price: '80,00 ₺',
         image: '/images/salgam.jpg'
       },
       {
         id: 46,
         name: 'Arslan Kara Maya Ayran',
         description: '245 Ml',
-        price: '80,00 ₺',
         image: '/images/ayran.jpg'
       },
       {
         id: 47,
         name: 'Adana Şalgam (Acılı/Acisiz)',
         description: '450 Ml',
-        price: '90,00 ₺',
         image: '/images/adana-salgam.jpg'
       },
       {
         id: 48,
         name: 'Köpüklü Yayık Ayran',
         description: '450 Ml',
-        price: '90,00 ₺',
         image: '/images/yayik-ayran.jpg'
       }
     ]
   }
 
-  // Parse price string to number (removing ₺ and comma)
-  const parsePrice = (priceStr: string): number => {
-    return parseFloat(priceStr.replace('₺', '').replace('.', '').replace(',', '.'))
+  // Open quantity modal
+  const openQuantityModal = (item: MenuItem) => {
+    setSelectedItem(item)
+    setSelectedQuantity(1)
+    setQuantityModalOpen(true)
   }
 
-  // Add item to cart
-  const addToCart = (item: MenuItem) => {
+  // Add item to cart with specified quantity
+  const addToCart = (item: MenuItem, quantity: number = 1) => {
     setCartItems(prevItems => {
       const existingItem = prevItems.find(cartItem => cartItem.id === item.id)
       if (existingItem) {
         return prevItems.map(cartItem =>
           cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            ? { ...cartItem, quantity: cartItem.quantity + quantity }
             : cartItem
         )
       }
-      return [...prevItems, { ...item, quantity: 1 }]
+      return [...prevItems, {
+        id: item.id,
+        name: item.name,
+        description: item.description,
+        image: item.image,
+        popular: item.popular,
+        quantity
+      }]
     })
+  }
+
+  // Handle adding item with selected quantity
+  const handleAddToCartWithQuantity = () => {
+    if (selectedItem) {
+      addToCart(selectedItem, selectedQuantity)
+      setQuantityModalOpen(false)
+      setSelectedItem(null)
+      setSelectedQuantity(1)
+    }
   }
 
   // Remove item from cart
@@ -431,15 +413,44 @@ const Menu = () => {
     )
   }
 
-  // Calculate total price
-  const calculateTotal = (): string => {
-    const total = cartItems.reduce(
-      (sum, item) => sum + parsePrice(item.price) * item.quantity,
-      0
-    )
-    return total.toLocaleString('tr-TR', { minimumFractionDigits: 2 }) + ' ₺'
+  // Generate order data for QR code
+  const generateOrderData = () => {
+    const orderId = `ORDER-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+    const order = {
+      orderId,
+      items: cartItems.map(item => ({
+        id: item.id,
+        name: item.name,
+        description: item.description,
+        quantity: item.quantity
+      })),
+      timestamp: new Date().toISOString(),
+      status: 'pending'
+    }
+    
+    // In a real app, this would be sent to a server
+    // For demo purposes, we'll store in localStorage
+    const existingOrders = JSON.parse(localStorage.getItem('orders') || '[]')
+    existingOrders.push(order)
+    localStorage.setItem('orders', JSON.stringify(existingOrders))
+    
+    // Create QR code data
+    const qrData = JSON.stringify({
+      type: 'order',
+      orderId,
+      url: `${window.location.origin}/waiter`
+    })
+    
+    setOrderData(qrData)
+    setIsQRModalOpen(true)
   }
 
+  // Complete order and clear cart
+  const completeOrder = () => {
+    generateOrderData()
+    setCartItems([])
+    setIsCartOpen(false)
+  }
 
   return (
     <section id="menu" className="section-padding bg-gray-50">
@@ -498,12 +509,9 @@ const Menu = () => {
                 <p className="text-gray-600 mb-4">
                   {item.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-primary-600">
-                    {item.price}
-                  </span>
+                <div className="flex justify-end">
                   <button
-                    onClick={() => addToCart(item)}
+                    onClick={() => openQuantityModal(item)}
                     className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     Menüye Ekle
@@ -563,7 +571,7 @@ const Menu = () => {
                       <div key={item.id} className="flex items-center space-x-4 p-3 bg-gray-50 rounded-lg">
                         <div className="flex-1">
                           <h3 className="font-medium">{item.name}</h3>
-                          <p className="text-sm text-gray-600">{item.price}</p>
+                          <p className="text-sm text-gray-600">{item.description}</p>
                         </div>
                         <div className="flex items-center space-x-2">
                           <button
@@ -594,14 +602,106 @@ const Menu = () => {
                 )}
               </div>
               
+              {/* Order Complete Button */}
               {cartItems.length > 0 && (
                 <div className="border-t p-4">
-                  <div className="flex justify-between">
-                    <span className="text-lg font-semibold">Toplam:</span>
-                    <span className="text-lg font-bold text-red-600">{calculateTotal()}</span>
-                  </div>
+                  <button
+                    onClick={completeOrder}
+                    className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300"
+                  >
+                    Siparişi Tamamla
+                  </button>
                 </div>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* QR Code Modal */}
+      {isQRModalOpen && (
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setIsQRModalOpen(false)}></div>
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative">
+              <button
+                onClick={() => setIsQRModalOpen(false)}
+                className="absolute top-4 right-4 p-2 rounded-md hover:bg-gray-100"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
+              <div className="text-center">
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">Siparişiniz Alındı!</h2>
+                <p className="text-gray-600 mb-6">
+                  Lütfen bu QR kodu garsonumuza gösterin
+                </p>
+                
+                {orderData && <QRCodeComponent data={orderData} size={250} />}
+                
+                <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                  <p className="text-sm text-gray-600">
+                    Sipariş numaranız garson tarafından tarandıktan sonra hazırlanmaya başlayacaktır.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Quantity Selection Modal */}
+      {quantityModalOpen && selectedItem && (
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setQuantityModalOpen(false)}></div>
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative">
+              <button
+                onClick={() => setQuantityModalOpen(false)}
+                className="absolute top-4 right-4 p-2 rounded-md hover:bg-gray-100"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{selectedItem.name}</h3>
+                <p className="text-gray-600">{selectedItem.description}</p>
+              </div>
+              
+              <div className="flex items-center justify-center space-x-4 mb-6">
+                <button
+                  onClick={() => setSelectedQuantity(Math.max(1, selectedQuantity - 1))}
+                  className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
+                >
+                  -
+                </button>
+                <span className="text-2xl font-semibold w-12 text-center">{selectedQuantity}</span>
+                <button
+                  onClick={() => setSelectedQuantity(selectedQuantity + 1)}
+                  className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
+                >
+                  +
+                </button>
+              </div>
+              
+              <div className="flex space-x-3">
+                <button
+                  onClick={() => setQuantityModalOpen(false)}
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+                >
+                  İptal
+                </button>
+                <button
+                  onClick={handleAddToCartWithQuantity}
+                  className="flex-1 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                  Sepete Ekle
+                </button>
+              </div>
             </div>
           </div>
         </div>

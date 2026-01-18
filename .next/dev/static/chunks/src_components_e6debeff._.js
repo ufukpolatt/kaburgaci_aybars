@@ -54,25 +54,36 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/",
                             className: "flex items-center",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: `text-2xl md:text-3xl font-bold transition-colors duration-300 ${isScrolled || isLightPage ? 'text-primary-700' : 'text-white'}`,
-                                children: [
-                                    "Kaburgacı ",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-secondary-500",
-                                        children: "Aybaz"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Header.tsx",
-                                        lineNumber: 46,
-                                        columnNumber: 25
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 43,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0))
-                        }, void 0, false, {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                    src: "/images/1.jpg",
+                                    alt: "Kaburgacı Aybaz Logo",
+                                    className: "h-10 w-10 mr-3 rounded-full object-cover"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Header.tsx",
+                                    lineNumber: 43,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                    className: `text-2xl md:text-3xl font-bold transition-colors duration-300 ${isScrolled || isLightPage ? 'text-primary-700' : 'text-white'}`,
+                                    children: [
+                                        "Kaburgacı ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-red-500",
+                                            children: "Aybaz"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/Header.tsx",
+                                            lineNumber: 51,
+                                            columnNumber: 25
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/Header.tsx",
+                                    lineNumber: 48,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/components/Header.tsx",
                             lineNumber: 42,
                             columnNumber: 11
@@ -83,67 +94,67 @@ const Header = ()=>{
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/",
-                                        className: `font-medium transition-colors duration-300 hover:text-secondary-500 ${isScrolled || isLightPage ? 'text-gray-800' : 'text-white'}`,
+                                        className: `font-medium transition-colors duration-300 hover:text-primary-500 ${isScrolled || isLightPage ? 'text-gray-800' : 'text-white'}`,
                                         children: "Ana Sayfa"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 58,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 57,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/menu",
-                                        className: `font-medium transition-colors duration-300 hover:text-secondary-500 ${isScrolled || isLightPage ? 'text-gray-800' : 'text-white'}`,
+                                        className: `font-medium transition-colors duration-300 hover:text-primary-500 ${isScrolled || isLightPage ? 'text-gray-800' : 'text-white'}`,
                                         children: "Menü"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 68,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 67,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/about",
-                                        className: `font-medium transition-colors duration-300 hover:text-secondary-500 ${isScrolled || isLightPage ? 'text-gray-800' : 'text-white'}`,
+                                        className: `font-medium transition-colors duration-300 hover:text-primary-500 ${isScrolled || isLightPage ? 'text-gray-800' : 'text-white'}`,
                                         children: "Hakkımızda"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header.tsx",
-                                        lineNumber: 73,
+                                        lineNumber: 78,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/contact",
-                                        className: `font-medium transition-colors duration-300 hover:text-secondary-500 ${isScrolled || isLightPage ? 'text-gray-800' : 'text-white'}`,
+                                        className: `font-medium transition-colors duration-300 hover:text-primary-500 ${isScrolled || isLightPage ? 'text-gray-800' : 'text-white'}`,
                                         children: "İletişim"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 88,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 87,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Header.tsx",
-                            lineNumber: 51,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -162,7 +173,7 @@ const Header = ()=>{
                                     d: "M6 18L18 6M6 6l12 12"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 114,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                     strokeLinecap: "round",
@@ -171,17 +182,17 @@ const Header = ()=>{
                                     d: "M4 6h16M4 12h16M4 18h16"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 116,
+                                    lineNumber: 121,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 101,
+                                lineNumber: 106,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header.tsx",
-                            lineNumber: 95,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
@@ -198,76 +209,76 @@ const Header = ()=>{
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/",
-                                    className: "block text-gray-800 font-medium hover:text-secondary-500 transition-colors duration-300 py-2 border-b border-gray-100",
+                                    className: "block text-gray-800 font-medium hover:text-primary-500 transition-colors duration-300 py-2 border-b border-gray-100",
                                     onClick: ()=>setIsMenuOpen(false),
                                     children: "Ana Sayfa"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 137,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 131,
+                                lineNumber: 136,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/menu",
-                                    className: "block text-gray-800 font-medium hover:text-secondary-500 transition-colors duration-300 py-2 border-b border-gray-100",
+                                    className: "block text-gray-800 font-medium hover:text-primary-500 transition-colors duration-300 py-2 border-b border-gray-100",
                                     onClick: ()=>setIsMenuOpen(false),
                                     children: "Menü"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 146,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 140,
+                                lineNumber: 145,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/about",
-                                    className: "block text-gray-800 font-medium hover:text-secondary-500 transition-colors duration-300 py-2 border-b border-gray-100",
+                                    className: "block text-gray-800 font-medium hover:text-primary-500 transition-colors duration-300 py-2 border-b border-gray-100",
                                     onClick: ()=>setIsMenuOpen(false),
                                     children: "Hakkımızda"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 150,
+                                    lineNumber: 155,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 149,
+                                lineNumber: 154,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/contact",
-                                    className: "block text-gray-800 font-medium hover:text-secondary-500 transition-colors duration-300 py-2",
+                                    className: "block text-gray-800 font-medium hover:text-primary-500 transition-colors duration-300 py-2",
                                     onClick: ()=>setIsMenuOpen(false),
                                     children: "İletişim"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 164,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 158,
+                                lineNumber: 163,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Header.tsx",
-                        lineNumber: 130,
+                        lineNumber: 135,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/Header.tsx",
-                    lineNumber: 129,
+                    lineNumber: 134,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             ]
@@ -331,10 +342,17 @@ const ScrollAnimation = ({ children, variants = {
         once: true,
         margin: '-100px'
     });
+    // Create a properly typed variants object
     const updatedVariants = {
-        ...variants,
+        hidden: variants.hidden || {
+            opacity: 0,
+            y: 50
+        },
         visible: {
-            ...variants.visible,
+            ...variants.visible || {
+                opacity: 1,
+                y: 0
+            },
             transition: {
                 ...transition,
                 delay,
@@ -351,7 +369,7 @@ const ScrollAnimation = ({ children, variants = {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ScrollAnimation.tsx",
-        lineNumber: 42,
+        lineNumber: 40,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -385,13 +403,8 @@ var _s = __turbopack_context__.k.signature();
 ;
 const About = ()=>{
     _s();
-    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('hikaye');
+    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('misyon');
     const tabs = [
-        {
-            id: 'hikaye',
-            name: 'Hikayemiz',
-            icon: '📖'
-        },
         {
             id: 'misyon',
             name: 'Misyonumuz',
@@ -409,43 +422,31 @@ const About = ()=>{
         }
     ];
     const tabContent = {
-        hikaye: {
-            title: '1995\'ten Beri Lezzetin Adresi',
-            content: [
-                'Kaburgacı Aybaz, 1995 yılında küçük bir aile işletmesi olarak başladı. Kurucumuz Aybaz Bey, yıllar süren mutfak deneyimini ve et işleme konusundaki ustalığını birleştirerek Türkiye\'nin en lezzetli kaburga tariflerini oluşturdu.',
-                'İlk günlerde sadece birkaç çeşit kaburga ile hizmet veren restoranımız, zamanla müşterilerimizin talepleri doğrultusunda menüsünü genişletti. Özellikle "Aybaz Özel Kaburga" tarifi, kısa sürede müşterilerimizin favorisi haline geldi.',
-                'Bugün, 28 yıllık tecrübemizle Türkiye\'nin dört bir yanından gelen misafirlerimize en kaliteli hizmeti sunmaya devam ediyoruz. Her bir lokmada yılların birikimini ve ailemizin lezzet sırrını bulabilirsiniz.'
-            ],
-            image: '/images/about-story.jpg'
-        },
         misyon: {
             title: 'Misyonumuz',
             content: [
-                'Müşterilerimize en kaliteli ve taze malzemelerle hazırlanmış, lezzetli yemekler sunmak.',
-                'Geleneksel Türk mutfağını modern sunum teknikleriyle birleştirerek benzersiz bir deneyim yaşatmak.',
-                'Her müşteriyi ailemizin bir üyesi gibi karşılayarak sıcak ve samimi bir ortam oluşturmak.',
-                'Sürdürülebilir ve etik üretim anlayışıyla çevreye ve topluma karşı sorumluluklarımızı yerine getirmek.'
+                'Kaburgacı Aybaz olarak misyonumuz; ustalıkla hazırlanan kaburgayı, en kaliteli malzemelerle, geleneksel lezzet anlayışını bozmadan misafirlerimize sunmak; her lokmada samimiyeti, doyuruculuğu ve gerçek et lezzetini hissettirmektir.',
+                'Misafirlerimizin yalnızca karınlarını değil, lezzet hafızalarını da doyurmayı amaçlıyoruz.'
             ],
             image: '/images/about-mission.jpg'
         },
         vizyon: {
             title: 'Vizyonumuz',
             content: [
-                'Türkiye\'nin en çok tercih edilen kaburga restoranı olmak.',
-                'Uluslararası alanda Türk mutfağını temsil eden bir marka haline gelmek.',
-                'Yenilikçi lezzetler ve sunumlarla sektörde lider konumunu korumak.',
-                'Franchising sistemiyle Türkiye ve dünyada daha fazla noktada hizmet vermek.'
+                'Türkiye\'de kaburga denince akla gelen, lezzetiyle, hizmetiyle ve kalitesiyle fark yaratan öncü bir marka olmak.',
+                'Gelenekten kopmadan yeniliğe açık, her şubede aynı lezzeti sunan, kaburgayı bir "yemek"ten öte bir deneyim haline getiren bir marka olmayı hedefliyoruz.'
             ],
             image: '/images/about-vision.jpg'
         },
         degerler: {
             title: 'Değerlerimiz',
             content: [
-                'Kalite: Her zaman en kaliteli malzemeleri kullanırız.',
-                'Müşteri Odaklılık: Müşteri memnuniyetini her şeyin üstünde tutarız.',
-                'Geleneksel: Geleneksel tariflerimizi korurken modernize ederiz.',
-                'Samimiyet: Her müşteriyi ailemizin bir üyesi gibi karşılarız.',
-                'Sürdürülebilirlik: Doğaya ve topluma karşı sorumluluğumuz bilincindeyiz.'
+                'Kalite: Et seçiminden pişirme sürecine kadar taviz vermediğimiz kalite anlayışı',
+                'Ustalık: İşimizi bilen ellerden çıkan, sabırla pişirilen gerçek kaburga',
+                'Samimiyet: Misafirlerimizi müşteri değil, soframıza oturan dost olarak görmek',
+                'Gelenek: Türk mutfağının köklü lezzetlerini yaşatmak',
+                'Hijyen: Temizlik ve gıda güvenliğinde en yüksek standartlar',
+                'Süreklilik: Bugün olduğu gibi yarın da aynı lezzeti sunma sözü'
             ],
             image: '/images/about-values.jpg'
         }
@@ -486,21 +487,21 @@ const About = ()=>{
                             children: "Hakkımızda"
                         }, void 0, false, {
                             fileName: "[project]/src/components/About.tsx",
-                            lineNumber: 86,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-lg text-gray-600 max-w-2xl mx-auto",
-                            children: "28 yıllık lezzet serüvenimiz ve bizi özel kılan değerlerimiz"
+                            children: "Misyonumuz, vizyonumuz ve değerlerimizle Türkiye'nin en lezzetli kaburga deneyimini sunuyoruz"
                         }, void 0, false, {
                             fileName: "[project]/src/components/About.tsx",
-                            lineNumber: 89,
+                            lineNumber: 76,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/About.tsx",
-                    lineNumber: 85,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -514,19 +515,19 @@ const About = ()=>{
                                     children: tab.icon
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/About.tsx",
-                                    lineNumber: 106,
+                                    lineNumber: 93,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 tab.name
                             ]
                         }, tab.id, true, {
                             fileName: "[project]/src/components/About.tsx",
-                            lineNumber: 97,
+                            lineNumber: 84,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/components/About.tsx",
-                    lineNumber: 95,
+                    lineNumber: 82,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -539,7 +540,7 @@ const About = ()=>{
                                     children: tabContent[activeTab].title
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/About.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 102,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -549,18 +550,18 @@ const About = ()=>{
                                             children: paragraph
                                         }, index, false, {
                                             fileName: "[project]/src/components/About.tsx",
-                                            lineNumber: 120,
+                                            lineNumber: 107,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/About.tsx",
-                                    lineNumber: 118,
+                                    lineNumber: 105,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/About.tsx",
-                            lineNumber: 114,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -572,23 +573,23 @@ const About = ()=>{
                                     children: "Resim Yükleniyor..."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/About.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 115,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 127,
+                                lineNumber: 114,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/About.tsx",
-                            lineNumber: 126,
+                            lineNumber: 113,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/About.tsx",
-                    lineNumber: 113,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -602,7 +603,7 @@ const About = ()=>{
                                     children: feature.icon
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/About.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 128,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -610,7 +611,7 @@ const About = ()=>{
                                     children: feature.title
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/About.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 129,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -618,57 +619,33 @@ const About = ()=>{
                                     children: feature.description
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/About.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 132,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, index, true, {
                             fileName: "[project]/src/components/About.tsx",
-                            lineNumber: 136,
+                            lineNumber: 123,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/components/About.tsx",
-                    lineNumber: 134,
+                    lineNumber: 121,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mt-16 bg-primary-600 rounded-2xl p-8 text-white",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-2 md:grid-cols-4 gap-8 text-center",
+                        className: "grid grid-cols-2 md:grid-cols-3 gap-8 text-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "text-3xl md:text-4xl font-bold mb-2",
-                                        children: "28+"
+                                        children: "5K+"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 156,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-primary-100",
-                                        children: "Yıllık Tecrübe"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 157,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 155,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-3xl md:text-4xl font-bold mb-2",
-                                        children: "50K+"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 160,
+                                        lineNumber: 144,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -676,13 +653,13 @@ const About = ()=>{
                                         children: "Mutlu Müşteri"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 145,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 159,
+                                lineNumber: 143,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -692,7 +669,7 @@ const About = ()=>{
                                         children: "15+"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 148,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -700,13 +677,13 @@ const About = ()=>{
                                         children: "Özel Lezzet"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 149,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 163,
+                                lineNumber: 147,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -716,7 +693,7 @@ const About = ()=>{
                                         children: "4.9"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 152,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -724,39 +701,39 @@ const About = ()=>{
                                         children: "Müşteri Puanı"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 153,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 167,
+                                lineNumber: 151,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/About.tsx",
-                        lineNumber: 154,
+                        lineNumber: 141,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/About.tsx",
-                    lineNumber: 153,
+                    lineNumber: 140,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/About.tsx",
-            lineNumber: 84,
+            lineNumber: 71,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/About.tsx",
-        lineNumber: 83,
+        lineNumber: 70,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(About, "CLSquofgIVgSdyXueXpNutyYOQg=");
+_s(About, "KfU/34R+E5UtKpmBt01KFWlwgi4=");
 _c = About;
 const __TURBOPACK__default__export__ = About;
 var _c;
